@@ -64,6 +64,8 @@ class _HomePageState extends State<HomePage> {
 
   int headerIndex = 0;
   int buttonTndex = 0;
+  int buttonIndex1 = 0;
+
   bool _isSelected = false;
   ImagePicker picker = ImagePicker();
   late XFile _image;
