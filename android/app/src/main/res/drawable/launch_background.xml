@@ -10,3 +10,20 @@
             android:src="@mipmap/launch_image" />
     </item> -->
 </layer-list>
+
+
+<!--&lt;!&ndash;-->
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--&lt;!&ndash; Modify this file to customize your launch splash screen &ndash;&gt;-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--<item android:drawable="@android:color/transparent" />-->
+
+<!--&lt;!&ndash; You can insert your own image assets here &ndash;&gt;-->
+<!--&lt;!&ndash;    <item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <bitmap&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/icon" />&ndash;&gt;-->
+<!--&lt;!&ndash;    </item> &ndash;&gt;&ndash;&gt;-->
+<!--</layer-list>-->
+
+<!--*&ndash;&gt;-->

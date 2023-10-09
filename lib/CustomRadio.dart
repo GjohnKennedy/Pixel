@@ -7,6 +7,7 @@ class RadioButtonPage extends StatefulWidget {
 
 class _RadioButtonPageState extends State<RadioButtonPage> {
   bool _isSelected = false;
+  // static bool _isSelected = false;
 
   @override
   Widget build(BuildContext context) {
