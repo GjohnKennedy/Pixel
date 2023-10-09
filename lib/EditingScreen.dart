@@ -1375,24 +1375,12 @@ class _EditingScreenState extends State<EditingScreen> {
   void _hideProgressDialog(BuildContext context) {
     Navigator.of(context).pop(); // Close the dialog
   }
+  //Custom Crop Design
 
-  //Default Design
-  ///////
   Future<void> _cropImage(
       String name, double aspectRatioX, double aspectRatioY) async {
-    print("call-1");
-
     xWidth = aspectRatioX.toInt();
     yHeight = aspectRatioY.toInt();
-
-    crop_details.clear();
-
-    crop_details
-        .add(CropDetails(cropName: name, xx: aspectRatioX, yy: aspectRatioY));
-    print("ABOVESIZE");
-    print(crop_details.length);
-    // print(crop_details[0].xx);
-    if (picked_image == null) return;
 
     final croppedImage = await ImageCropper().cropImage(
       sourcePath: picked_image!.path,
@@ -1400,9 +1388,31 @@ class _EditingScreenState extends State<EditingScreen> {
         ratioX: aspectRatioX,
         ratioY: aspectRatioY,
       ),
+      androidUiSettings: AndroidUiSettings(
+        // cropGridColor: Colors.black,
+        // cropFrameColor: Colors.black,
+        cropGridRowCount: yHeight - 1,
+        cropGridColumnCount: xWidth - 1,
+        cropFrameStrokeWidth: 1,
+        cropFrameColor: Colors.white,
+        activeControlsWidgetColor: Colors.red,
+        toolbarTitle: 'CropImage', // Set the screen title to "CropYourOwn"
+        toolbarWidgetColor: Colors.red, // Set the toolbar widget color
+        toolbarColor: Colors.white, // Set the app bar color to red
+        statusBarColor: Colors
+            .transparent, // Set the status bar color to red (Android only)
+      ),
+      iosUiSettings: const IOSUiSettings(
+        title: 'CropYourOwn', // Set the screen title to "CropYourOwn"
+        doneButtonTitle: 'Crop', // Set the done button title
+        cancelButtonTitle: 'Cancel', // Set the cancel button title
+        // doneButtonColor: Colors.red, // Set the done button color to red
+        // cancelButtonColor: Colors.red, // Set the cancel button color to red
+      ),
     );
 
     if (croppedImage != null) {
+      // Do something with the cropped image
       print("call-2");
 
       getImageDimensions(croppedImage);
@@ -1417,6 +1427,48 @@ class _EditingScreenState extends State<EditingScreen> {
       });
     }
   }
+
+  //Default Design
+  ///////
+  // Future<void> _cropImage(
+  //     String name, double aspectRatioX, double aspectRatioY) async {
+  //   print("call-1");
+  //
+  //   xWidth = aspectRatioX.toInt();
+  //   yHeight = aspectRatioY.toInt();
+  //
+  //   crop_details.clear();
+  //
+  //   crop_details
+  //       .add(CropDetails(cropName: name, xx: aspectRatioX, yy: aspectRatioY));
+  //   print("ABOVESIZE");
+  //   print(crop_details.length);
+  //   // print(crop_details[0].xx);
+  //   if (picked_image == null) return;
+  //
+  //   final croppedImage = await ImageCropper().cropImage(
+  //     sourcePath: picked_image!.path,
+  //     aspectRatio: CropAspectRatio(
+  //       ratioX: aspectRatioX,
+  //       ratioY: aspectRatioY,
+  //     ),
+  //   );
+  //
+  //   if (croppedImage != null) {
+  //     print("call-2");
+  //
+  //     getImageDimensions(croppedImage);
+  //
+  //     setState(() {
+  //       image_ = croppedImage;
+  //       croped_image = croppedImage;
+  //       setState(() {
+  //         croped = true;
+  //         _isPixeArt = false;
+  //       });
+  //     });
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
