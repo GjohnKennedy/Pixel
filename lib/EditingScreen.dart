@@ -2220,6 +2220,7 @@ class _EditingScreenState extends State<EditingScreen> {
       for (int x = 0; x < image1.width; x++) {
         // Retrieving contents of a pixel
         final pixel = image1.getPixel(x, y);
+        print("pixelSize ${pixel.length}");
         print("Pixel value\t  ${x} \t ${y}\t ${pixel}");
         final red = pixel.r;
         final green = pixel.g;
@@ -2245,186 +2246,76 @@ class _EditingScreenState extends State<EditingScreen> {
             .add(Color.fromARGB(255, res.getR(), res.getG(), res.getB()));
 
         switch (colorCode) {
-          // case "#808080":
-          //   // Perform specific actions for color code #808080
-          //   //   print("Color code #808080 count: $count");
-          //   gray++;
-          //   break;
-          // colorList(colorcode: "#0cb4a3", status: 1),
-          // colorList(colorcode: "#0f735b", status: 1),
-          // colorList(colorcode: "#439f4c", status: 1),
-          // colorList(colorcode: "#a8d497", status: 1),
-          // colorList(colorcode: "#e9e778", status: 1),
           case "#0cb4a3":
-            // Perform specific actions for color code #808080
-            //   print("Color code #808080 count: $count");
-            //   gray++;
             c1++;
             break;
-
           case "#0f735b":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   orange1++;
             c2++;
             break;
           case "#439f4c":
-            // Perform specific actions for color code #808080
-            //   print("Color code #808080 count: $count");
-            //   green1++;
             c3++;
             break;
           case "#a8d497":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   brown++;
             c4++;
             break;
           case "#e9e778":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   darkG++;
             c5++;
             break;
-          //         colorList(colorcode: "#f3d922", status: 1),
-          // colorList(colorcode: "#f19d20", status: 1),
-          // colorList(colorcode: "#ef7439", status: 1),
-          // colorList(colorcode: "#e41f28", status: 1),
-          // colorList(colorcode: "#ac2126", status: 1),
           case "#f3d922":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   black++;
             c6++;
             break;
           case "#f19d20":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c7++;
             break;
           case "#ef7439":
-            // Perform specific actions for color code #808080
-            //   print("Color code #808080 count: $count");
-            //   gray++;
             c8++;
             break;
           case "#e41f28":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   orange1++;
             c9++;
             break;
           case "#ac2126":
-            // Perform specific actions for color code #808080
-            //   print("Color code #808080 count: $count");
-            //   green1++;
             c10++;
             break;
-          // colorList(colorcode: "#f6d1cb", status: 1),
-          // colorList(colorcode: "#dfa2b2", status: 1),
-          // colorList(colorcode: "#99497e", status: 1),
-          // colorList(colorcode: "#7f6fae", status: 1),
-          // colorList(colorcode: "#19598b", status: 1),
           case "#f6d1cb":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   brown++;
             c11++;
             break;
           case "#dfa2b2":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   darkG++;
             c12++;
             break;
           case "#99497e":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   black++;
             c13++;
-
             break;
           case "#7f6fae":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c14++;
-
             break;
           case "#19598b":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c15++;
-
             break;
-          //         colorList(colorcode: "#2496cc", status: 1),
-          // colorList(colorcode: "#82c8d4", status: 1),
-          // colorList(colorcode: "#6d3421", status: 1),
-          // colorList(colorcode: "#b88874", status: 1),
-          // colorList(colorcode: "#ebdac6", status: 1),
           case "#2496cc":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   darkG++;
             c16++;
-
             break;
           case "#82c8d4":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   black++;
             c17++;
-
             break;
           case "#6d3421":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c18++;
-
             break;
           case "#b88874":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c19++;
-
             break;
           case "#ebdac6":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c20++;
             break;
-          // colorList(colorcode: "#f0f0f0", status: 1),
-          // colorList(colorcode: "#c1c6ca", status: 1),
-          // colorList(colorcode: "#81898b", status: 1),
-          // colorList(colorcode: "#262729", status: 1),
           case "#f0f0f0":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c21++;
             break;
           case "#c1c6ca":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c22++;
             break;
           case "#81898b":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c23++;
-
             break;
           case "#262729":
-            // Perform specific actions for color code #89580
-            //   print("Color code #89580 count: $count");
-            //   white++;
             c24++;
             break;
         }
@@ -2433,12 +2324,6 @@ class _EditingScreenState extends State<EditingScreen> {
 
     DateTime datetime = DateTime.now();
     String dateSec = datetime.toString();
-    // String dateMsec = datetime.millisecond.toString();
-    // final resizedImage3 =
-    //     img.copyResize(image1, width: _imageWidth, height: _imageHeight);
-
-    // final pixelatedImage = img.pixelate(resizedImage3, size: 10);
-
     final tempDirc = await getTemporaryDirectory();
     final tempPathc = tempDirc.path;
     final colorchaged_img = File('$tempPathc/colorchange$dateSec.jpg')
@@ -2469,67 +2354,70 @@ class _EditingScreenState extends State<EditingScreen> {
     b++;
     // hideProgressDialog();
     await _Selectedcolor_Extract();
+    // await addGridLinesToImage(colorchaged_img);
   }
 
-  Future<void> addGridLinesToImage(File file, int gridSize) async {
-    final bytes1 = await file.readAsBytes();
-    final image1 = img.decodeImage(bytes1);
-
-    if (image1 == null) {
-      // Handle the case where image decoding fails
-      return;
-    }
-
-    print("line image1.height ${image1.height}");
-    print("line image1.width ${image1.width}");
-
-    final cellWidth = image1.width ~/ gridSize;
-    final cellHeight = image1.height ~/ gridSize;
-
-    print(" line image1 cellWidth ${cellWidth}");
-    print("cellHeight ${cellHeight}");
-
-    // Draw vertical grid lines
-    for (int x = cellWidth; x < image1.width; x += cellWidth) {
-      for (int y = 0; y < image1.height; y++) {
-        image1.setPixelRgb(
-            x, y, 255, 255, 255); // Set the color of the grid lines to white
-      }
-    }
-
-    // Draw horizontal grid lines
-    for (int y = cellHeight; y < image1.height; y += cellHeight) {
-      for (int x = 0; x < image1.width; x++) {
-        image1.setPixelRgb(
-            x, y, 255, 255, 255); // Set the color of the grid lines to white
-      }
-    }
-
-    DateTime datetime = DateTime.now();
-    String dateSec = datetime.toString();
-
-    final tempDir = await getTemporaryDirectory();
-    final tempPath = tempDir.path;
-    final imageWithGrid = File('$tempPath/imageWithGrid$dateSec.jpg')
-      ..writeAsBytesSync(img.encodeJpg(image1));
-
-    final resizedImage3 =
-        img.copyResize(image1, width: _imageWidth, height: _imageHeight);
-
-    final tempDirc = await getTemporaryDirectory();
-    final tempPathc = tempDirc.path;
-    final colorchaged_img = File('$tempPathc/final$dateSec.jpg')
-      ..writeAsBytesSync(img.encodeJpg(resizedImage3));
-
-    setState(() {
-      image_ = colorchaged_img;
-      _isPixelated = false;
-      colorsChanged =
-          false; // You're not changing pixel colors, just adding grid lines
-    });
-    // hideProgressDialog();
-    await _Selectedcolor_Extract();
-  }
+  // Future<void> addGridLinesToImage(File file) async {
+  //   final bytes1 = await file.readAsBytes();
+  //   final image1 = img.decodeImage(bytes1);
+  //
+  //   if (image1 == null) {
+  //     // Handle the case where image decoding fails
+  //     return;
+  //   }
+  //
+  //   print("line image1.height ${image1.height}");
+  //   print("line image1.width ${image1.width}");
+  //
+  //   // final cellWidth = image1.width ~/ gridSize;
+  //   // final cellHeight = image1.height ~/ gridSize;
+  //   final cellWidth = image1.width ~/ gridSize;
+  //   final cellHeight = image1.height ~/ gridSize;
+  //
+  //   print(" line image1 cellWidth ${cellWidth}");
+  //   print("cellHeight ${cellHeight}");
+  //
+  //   // Draw vertical grid lines
+  //   for (int x = cellWidth; x < image1.width; x += cellWidth) {
+  //     for (int y = 0; y < image1.height; y++) {
+  //       image1.setPixelRgb(
+  //           x, y, 255, 255, 255); // Set the color of the grid lines to white
+  //     }
+  //   }
+  //
+  //   // Draw horizontal grid lines
+  //   for (int y = cellHeight; y < image1.height; y += cellHeight) {
+  //     for (int x = 0; x < image1.width; x++) {
+  //       image1.setPixelRgb(
+  //           x, y, 255, 255, 255); // Set the color of the grid lines to white
+  //     }
+  //   }
+  //
+  //   DateTime datetime = DateTime.now();
+  //   String dateSec = datetime.toString();
+  //
+  //   final tempDir = await getTemporaryDirectory();
+  //   final tempPath = tempDir.path;
+  //   final imageWithGrid = File('$tempPath/imageWithGrid$dateSec.jpg')
+  //     ..writeAsBytesSync(img.encodeJpg(image1));
+  //
+  //   final resizedImage3 =
+  //       img.copyResize(image1, width: _imageWidth, height: _imageHeight);
+  //
+  //   final tempDirc = await getTemporaryDirectory();
+  //   final tempPathc = tempDirc.path;
+  //   final colorchaged_img = File('$tempPathc/final$dateSec.jpg')
+  //     ..writeAsBytesSync(img.encodeJpg(resizedImage3));
+  //
+  //   setState(() {
+  //     image_ = colorchaged_img;
+  //     _isPixelated = false;
+  //     colorsChanged =
+  //         false; // You're not changing pixel colors, just adding grid lines
+  //   });
+  //   // hideProgressDialog();
+  //   // await _Selectedcolor_Extract();
+  // }
 
   Future<ColorCode> nearestColor(
       List<ColorCode> colorCodelist, int tempR, int tempG, int tempB) async {
