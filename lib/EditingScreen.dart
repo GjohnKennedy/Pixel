@@ -1871,9 +1871,8 @@ class _EditingScreenState extends State<EditingScreen> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         SizedBox(
-                                          width:100,
+                                          width: 100,
                                           child: ElevatedButton(
-
                                             child: const Text('Cancel'),
                                             style: ButtonStyle(
                                               backgroundColor:
@@ -1883,7 +1882,8 @@ class _EditingScreenState extends State<EditingScreen> {
                                                   RoundedRectangleBorder>(
                                                 RoundedRectangleBorder(
                                                   borderRadius:
-                                                      BorderRadius.circular(20.0),
+                                                      BorderRadius.circular(
+                                                          20.0),
                                                 ),
                                               ),
                                             ),
@@ -2013,7 +2013,7 @@ class _EditingScreenState extends State<EditingScreen> {
                                         : const Text(
                                             "Tiles",
                                             style: TextStyle(
-                                              color: Colors.red,
+                                              color: Colors.black,
                                               fontWeight: FontWeight.bold,
                                               fontSize: 10,
                                             ),
@@ -2021,12 +2021,12 @@ class _EditingScreenState extends State<EditingScreen> {
                                     const SizedBox(
                                       height: 8,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 2,
                                     ),
                                     Text(
                                       "${yvv} Pixels",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12,
