@@ -1870,53 +1870,98 @@ class _EditingScreenState extends State<EditingScreen> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        SizedBox(
-                                          width: 100,
-                                          child: ElevatedButton(
-                                            child: const Text('Cancel'),
-                                            style: ButtonStyle(
-                                              backgroundColor:
-                                                  MaterialStateProperty.all<
-                                                      Color>(Colors.red),
-                                              shape: MaterialStateProperty.all<
-                                                  RoundedRectangleBorder>(
-                                                RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          20.0),
-                                                ),
+                                        ElevatedButton(
+                                          child: const Text('Cancel'),
+                                          style: ButtonStyle(
+                                            backgroundColor:
+                                                MaterialStateProperty.all<
+                                                    Color>(Colors.red),
+                                            shape: MaterialStateProperty.all<
+                                                RoundedRectangleBorder>(
+                                              RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(20.0),
                                               ),
                                             ),
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
                                           ),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
                                         ),
-                                        SizedBox(
-                                          width: 100,
-                                          child: ElevatedButton(
-                                            child: const Text(
-                                              'Confirm',
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  color: Colors.red),
+                                        ElevatedButton(
+                                          child: const Text(
+                                            'Confirm',
+                                            style: TextStyle(
+                                              fontSize: 18,
+                                              color: Colors.red,
                                             ),
-                                            style: OutlinedButton.styleFrom(
-                                                backgroundColor: Colors.white,
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            24)),
-                                                side: const BorderSide(
-                                                    width: 1,
-                                                    color: Colors.red)),
-                                            onPressed: () {
-                                              deletePalette(index);
-                                              Navigator.of(context).pop();
-                                            },
                                           ),
+                                          style: OutlinedButton.styleFrom(
+                                            backgroundColor: Colors.white,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(24),
+                                            ),
+                                            side: const BorderSide(
+                                              width: 1,
+                                              color: Colors.red,
+                                            ),
+                                          ),
+                                          onPressed: () {
+                                            deletePalette(index);
+                                            Navigator.of(context).pop();
+                                          },
                                         ),
                                       ],
+
+                                      // children: [
+                                      //   SizedBox(
+                                      //     width: 100,
+                                      //     child: ElevatedButton(
+                                      //       child: const Text('Cancel'),
+                                      //       style: ButtonStyle(
+                                      //         backgroundColor:
+                                      //             MaterialStateProperty.all<
+                                      //                 Color>(Colors.red),
+                                      //         shape: MaterialStateProperty.all<
+                                      //             RoundedRectangleBorder>(
+                                      //           RoundedRectangleBorder(
+                                      //             borderRadius:
+                                      //                 BorderRadius.circular(
+                                      //                     20.0),
+                                      //           ),
+                                      //         ),
+                                      //       ),
+                                      //       onPressed: () {
+                                      //         Navigator.of(context).pop();
+                                      //       },
+                                      //     ),
+                                      //   ),
+                                      //   SizedBox(
+                                      //     width: 100,
+                                      //     child: ElevatedButton(
+                                      //       child: const Text(
+                                      //         'Confirm',
+                                      //         style: TextStyle(
+                                      //             fontSize: 18,
+                                      //             color: Colors.red),
+                                      //       ),
+                                      //       style: OutlinedButton.styleFrom(
+                                      //           backgroundColor: Colors.white,
+                                      //           shape: RoundedRectangleBorder(
+                                      //               borderRadius:
+                                      //                   BorderRadius.circular(
+                                      //                       24)),
+                                      //           side: const BorderSide(
+                                      //               width: 1,
+                                      //               color: Colors.red)),
+                                      //       onPressed: () {
+                                      //         deletePalette(index);
+                                      //         Navigator.of(context).pop();
+                                      //       },
+                                      //     ),
+                                      //   ),
+                                      // ],
                                     ),
                                   ],
                                 );
