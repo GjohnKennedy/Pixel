@@ -1870,23 +1870,27 @@ class _EditingScreenState extends State<EditingScreen> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        ElevatedButton(
-                                          child: const Text('Cancel'),
-                                          style: ButtonStyle(
-                                            backgroundColor:
-                                                MaterialStateProperty.all<
-                                                    Color>(Colors.red),
-                                            shape: MaterialStateProperty.all<
-                                                RoundedRectangleBorder>(
-                                              RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(20.0),
+                                        SizedBox(
+                                          width:100,
+                                          child: ElevatedButton(
+
+                                            child: const Text('Cancel'),
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all<
+                                                      Color>(Colors.red),
+                                              shape: MaterialStateProperty.all<
+                                                  RoundedRectangleBorder>(
+                                                RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(20.0),
+                                                ),
                                               ),
                                             ),
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
                                           ),
-                                          onPressed: () {
-                                            Navigator.of(context).pop();
-                                          },
                                         ),
                                         ElevatedButton(
                                           child: const Text(
