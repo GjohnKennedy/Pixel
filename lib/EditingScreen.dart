@@ -1987,7 +1987,7 @@ class _EditingScreenState extends State<EditingScreen> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(10.0),
+                                padding: const EdgeInsets.all(6.0),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -2013,7 +2013,7 @@ class _EditingScreenState extends State<EditingScreen> {
                                         : const Text(
                                             "Tiles",
                                             style: TextStyle(
-                                              color: Colors.black,
+                                              color: Colors.red,
                                               fontWeight: FontWeight.bold,
                                               fontSize: 10,
                                             ),
